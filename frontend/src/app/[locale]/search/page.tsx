@@ -29,7 +29,15 @@ export default function SearchPage() {
       <SearchFilters
         filters={filters}
         onChange={(key, val) =>
-          setFilters((prev) => ({ ...prev, [key]: val || undefined }))
+          setFilters((prev) => {
+            const next = { ...prev };
+            if (val) {
+              next[key] = val;
+            } else {
+              delete next[key];
+            }
+            return next;
+          })
         }
         onClear={() => setFilters({})}
       />

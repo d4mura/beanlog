@@ -1,12 +1,11 @@
 "use client";
 
 import { create } from "zustand";
-import type { User, Session } from "@supabase/supabase-js";
 
 interface AuthState {
-  user: User | null;
-  session: Session | null;
-  setAuth: (user: User, session: Session) => void;
+  user: any | null;
+  session: any | null;
+  setAuth: (user: any, session: any) => void;
   clearAuth: () => void;
 }
 

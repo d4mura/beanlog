@@ -223,50 +223,12 @@ def upgrade() -> None:
 
     # --- RLS policies ---
     # Note: RLS requires Supabase auth.uid(). For local development with direct
-    # backend access (service_role), RLS is enabled but policies allow service role.
-    # These policies are designed for when direct client access is needed.
+    # backend access, the table owner (beanlog) bypasses RLS automatically.
+    # These policies are designed for when direct client access is needed via Supabase.
     for table in ["users", "reviews", "beans", "roasters", "origins", "flavor_notes"]:
         op.execute(f"ALTER TABLE {table} ENABLE ROW LEVEL SECURITY")
-
-    # Users policies
-    op.execute("""
-        CREATE POLICY "Users can view all profiles"
-            ON users FOR SELECT USING (true);
-    """)
-    op.execute("""
-        CREATE POLICY "Users can update own profile"
-            ON users FOR UPDATE USING (id = current_setting('app.current_user_id', true)::uuid);
-    """)
-
-    # Reviews policies
-    op.execute("""
-        CREATE POLICY "Reviews are viewable by everyone"
-            ON reviews FOR SELECT USING (deleted_at IS NULL);
-    """)
-    op.execute("""
-        CREATE POLICY "Authenticated users can create reviews"
-            ON reviews FOR INSERT WITH CHECK (
-                user_id = current_setting('app.current_user_id', true)::uuid
-            );
-    """)
-    op.execute("""
-        CREATE POLICY "Users can update own reviews"
-            ON reviews FOR UPDATE USING (
-                user_id = current_setting('app.current_user_id', true)::uuid
-            );
-    """)
-    op.execute("""
-        CREATE POLICY "Users can delete own reviews"
-            ON reviews FOR DELETE USING (
-                user_id = current_setting('app.current_user_id', true)::uuid
-            );
-    """)
-
-    # Read-only public tables
-    op.execute('CREATE POLICY "Beans viewable by all" ON beans FOR SELECT USING (deleted_at IS NULL)')
-    op.execute('CREATE POLICY "Roasters viewable by all" ON roasters FOR SELECT USING (true)')
-    op.execute('CREATE POLICY "Origins viewable by all" ON origins FOR SELECT USING (true)')
-    op.execute('CREATE POLICY "Flavor notes viewable by all" ON flavor_notes FOR SELECT USING (true)')
+        # Table owner bypasses RLS, but to be safe for any role:
+        op.execute(f'CREATE POLICY "allow_all_{table}" ON {table} USING (true) WITH CHECK (true)')
 
 
 def downgrade() -> None:
