@@ -1,0 +1,8 @@
+[
+  { "value": "washed", "name": "ウォッシュド", "name_en": "Washed" },
+  { "value": "natural", "name": "ナチュラル", "name_en": "Natural" },
+  { "value": "honey", "name": "ハニー", "name_en": "Honey" },
+  { "value": "anaerobic", "name": "アナエロビック", "name_en": "Anaerobic" },
+  { "value": "carbonic_maceration", "name": "カーボニックマセレーション", "name_en": "Carbonic Maceration" },
+  { "value": "other", "name": "その他", "name_en": "Other" }
+]

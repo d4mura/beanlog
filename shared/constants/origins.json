@@ -1,0 +1,12 @@
+[
+  { "country_code": "ET", "name": "エチオピア", "name_en": "Ethiopia" },
+  { "country_code": "CO", "name": "コロンビア", "name_en": "Colombia" },
+  { "country_code": "GT", "name": "グアテマラ", "name_en": "Guatemala" },
+  { "country_code": "KE", "name": "ケニア", "name_en": "Kenya" },
+  { "country_code": "BR", "name": "ブラジル", "name_en": "Brazil" },
+  { "country_code": "CR", "name": "コスタリカ", "name_en": "Costa Rica" },
+  { "country_code": "PA", "name": "パナマ", "name_en": "Panama" },
+  { "country_code": "RW", "name": "ルワンダ", "name_en": "Rwanda" },
+  { "country_code": "ID", "name": "インドネシア", "name_en": "Indonesia" },
+  { "country_code": "HN", "name": "ホンジュラス", "name_en": "Honduras" }
+]

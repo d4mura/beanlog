@@ -1,0 +1,21 @@
+services:
+  db:
+    image: pgvector/pgvector:pg17
+    container_name: beanlog-db
+    environment:
+      POSTGRES_USER: beanlog
+      POSTGRES_PASSWORD: beanlog_dev
+      POSTGRES_DB: beanlog
+    ports:
+      - "5432:5432"
+    volumes:
+      - beanlog_pgdata:/var/lib/postgresql/data
+      - ./docker/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U beanlog"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  beanlog_pgdata:

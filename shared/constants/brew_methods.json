@@ -1,0 +1,9 @@
+[
+  { "value": "pour_over", "name": "ハンドドリップ", "name_en": "Pour Over" },
+  { "value": "espresso", "name": "エスプレッソ", "name_en": "Espresso" },
+  { "value": "french_press", "name": "フレンチプレス", "name_en": "French Press" },
+  { "value": "aeropress", "name": "エアロプレス", "name_en": "AeroPress" },
+  { "value": "siphon", "name": "サイフォン", "name_en": "Siphon" },
+  { "value": "cold_brew", "name": "コールドブリュー", "name_en": "Cold Brew" },
+  { "value": "other", "name": "その他", "name_en": "Other" }
+]

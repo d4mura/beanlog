@@ -1,0 +1,120 @@
+{
+  "common": {
+    "appName": "BeanLog",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "notFound": "Page not found",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "search": "Search",
+    "login": "Login",
+    "logout": "Logout",
+    "signInWithGoogle": "Sign in with Google",
+    "noResults": "No results found",
+    "seeAll": "See all",
+    "language": "Language"
+  },
+  "nav": {
+    "home": "Home",
+    "beans": "Beans",
+    "roasters": "Roasters",
+    "search": "Search",
+    "profile": "Profile",
+    "scan": "Scan"
+  },
+  "beans": {
+    "title": "Coffee Beans",
+    "searchPlaceholder": "Search beans...",
+    "origin": "Origin",
+    "roastLevel": "Roast Level",
+    "process": "Process",
+    "variety": "Variety",
+    "altitude": "Altitude",
+    "flavor": "Flavor",
+    "avgRating": "Average Rating",
+    "reviewCount": "{count} reviews",
+    "noReviews": "No reviews yet",
+    "detail": "Bean Details",
+    "barcode": "Barcode",
+    "purchaseLink": "Purchase Link"
+  },
+  "reviews": {
+    "title": "Reviews",
+    "writeReview": "Write a Review",
+    "editReview": "Edit Review",
+    "rating": "Rating",
+    "brewMethod": "Brew Method",
+    "flavorNotes": "Flavor Notes",
+    "comment": "Comment",
+    "commentPlaceholder": "Share your tasting notes...",
+    "submit": "Submit",
+    "update": "Update",
+    "deleteConfirm": "Are you sure you want to delete this review?",
+    "duplicateError": "You have already reviewed this bean. Please edit your existing review.",
+    "maxFlavors": "You can select up to 5 flavors",
+    "selectFlavors": "Select flavors"
+  },
+  "roasters": {
+    "title": "Roasters",
+    "searchPlaceholder": "Search roasters...",
+    "beanCount": "{count} beans",
+    "website": "Website",
+    "instagram": "Instagram",
+    "beans": "Beans"
+  },
+  "profile": {
+    "title": "My Profile",
+    "myReviews": "My Reviews",
+    "settings": "Settings",
+    "preferredLanguage": "Language",
+    "editProfile": "Edit Profile"
+  },
+  "search": {
+    "title": "Search",
+    "placeholder": "Search beans, roasters...",
+    "filters": "Filters",
+    "clearFilters": "Clear filters",
+    "sortBy": "Sort by",
+    "sortRating": "Top Rated",
+    "sortNewest": "Newest",
+    "sortName": "Name"
+  },
+  "scan": {
+    "title": "Barcode Scan",
+    "description": "Scan a coffee bean barcode to look up information",
+    "scanning": "Scanning...",
+    "notFound": "No bean found for this barcode"
+  },
+  "auth": {
+    "loginTitle": "Login",
+    "loginDescription": "Sign in to BeanLog to write reviews",
+    "continueWithGoogle": "Continue with Google"
+  },
+  "roastLevels": {
+    "light": "Light",
+    "medium_light": "Medium Light",
+    "medium": "Medium",
+    "medium_dark": "Medium Dark",
+    "dark": "Dark"
+  },
+  "processes": {
+    "washed": "Washed",
+    "natural": "Natural",
+    "honey": "Honey",
+    "anaerobic": "Anaerobic",
+    "carbonic_maceration": "Carbonic Maceration",
+    "other": "Other"
+  },
+  "brewMethods": {
+    "pour_over": "Pour Over",
+    "espresso": "Espresso",
+    "french_press": "French Press",
+    "aeropress": "AeroPress",
+    "siphon": "Siphon",
+    "cold_brew": "Cold Brew",
+    "other": "Other"
+  }
+}

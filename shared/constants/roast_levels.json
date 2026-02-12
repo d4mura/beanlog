@@ -1,0 +1,7 @@
+[
+  { "value": "light", "name": "浅煎り", "name_en": "Light" },
+  { "value": "medium_light", "name": "中浅煎り", "name_en": "Medium Light" },
+  { "value": "medium", "name": "中煎り", "name_en": "Medium" },
+  { "value": "medium_dark", "name": "中深煎り", "name_en": "Medium Dark" },
+  { "value": "dark", "name": "深煎り", "name_en": "Dark" }
+]

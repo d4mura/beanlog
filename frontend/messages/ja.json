@@ -1,0 +1,120 @@
+{
+  "common": {
+    "appName": "BeanLog",
+    "loading": "読み込み中...",
+    "error": "エラーが発生しました",
+    "notFound": "ページが見つかりません",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "delete": "削除",
+    "edit": "編集",
+    "back": "戻る",
+    "search": "検索",
+    "login": "ログイン",
+    "logout": "ログアウト",
+    "signInWithGoogle": "Googleでログイン",
+    "noResults": "結果が見つかりません",
+    "seeAll": "すべて見る",
+    "language": "言語"
+  },
+  "nav": {
+    "home": "ホーム",
+    "beans": "豆一覧",
+    "roasters": "ロースター",
+    "search": "検索",
+    "profile": "マイページ",
+    "scan": "スキャン"
+  },
+  "beans": {
+    "title": "コーヒー豆",
+    "searchPlaceholder": "豆を検索...",
+    "origin": "産地",
+    "roastLevel": "焙煎度",
+    "process": "精製方法",
+    "variety": "品種",
+    "altitude": "標高",
+    "flavor": "フレーバー",
+    "avgRating": "平均評価",
+    "reviewCount": "{count}件のレビュー",
+    "noReviews": "まだレビューがありません",
+    "detail": "豆の詳細",
+    "barcode": "バーコード",
+    "purchaseLink": "購入リンク"
+  },
+  "reviews": {
+    "title": "レビュー",
+    "writeReview": "レビューを書く",
+    "editReview": "レビューを編集",
+    "rating": "評価",
+    "brewMethod": "抽出方法",
+    "flavorNotes": "フレーバーノート",
+    "comment": "コメント",
+    "commentPlaceholder": "味の感想を書いてください...",
+    "submit": "投稿",
+    "update": "更新",
+    "deleteConfirm": "このレビューを削除しますか？",
+    "duplicateError": "この豆には既にレビュー済みです。既存のレビューを編集してください。",
+    "maxFlavors": "フレーバーは最大5つまで選択できます",
+    "selectFlavors": "フレーバーを選択"
+  },
+  "roasters": {
+    "title": "ロースター",
+    "searchPlaceholder": "ロースターを検索...",
+    "beanCount": "{count}種類の豆",
+    "website": "ウェブサイト",
+    "instagram": "Instagram",
+    "beans": "取扱い豆"
+  },
+  "profile": {
+    "title": "マイページ",
+    "myReviews": "マイレビュー",
+    "settings": "設定",
+    "preferredLanguage": "表示言語",
+    "editProfile": "プロフィール編集"
+  },
+  "search": {
+    "title": "検索",
+    "placeholder": "豆、ロースターを検索...",
+    "filters": "フィルター",
+    "clearFilters": "フィルターをクリア",
+    "sortBy": "並び替え",
+    "sortRating": "評価順",
+    "sortNewest": "新着順",
+    "sortName": "名前順"
+  },
+  "scan": {
+    "title": "バーコードスキャン",
+    "description": "コーヒー豆のバーコードをスキャンして情報を検索",
+    "scanning": "スキャン中...",
+    "notFound": "この barcode に対応する豆が見つかりません"
+  },
+  "auth": {
+    "loginTitle": "ログイン",
+    "loginDescription": "BeanLog にログインしてレビューを投稿しましょう",
+    "continueWithGoogle": "Google で続ける"
+  },
+  "roastLevels": {
+    "light": "浅煎り",
+    "medium_light": "中浅煎り",
+    "medium": "中煎り",
+    "medium_dark": "中深煎り",
+    "dark": "深煎り"
+  },
+  "processes": {
+    "washed": "ウォッシュド",
+    "natural": "ナチュラル",
+    "honey": "ハニー",
+    "anaerobic": "アナエロビック",
+    "carbonic_maceration": "カーボニックマセレーション",
+    "other": "その他"
+  },
+  "brewMethods": {
+    "pour_over": "ハンドドリップ",
+    "espresso": "エスプレッソ",
+    "french_press": "フレンチプレス",
+    "aeropress": "エアロプレス",
+    "siphon": "サイフォン",
+    "cold_brew": "コールドブリュー",
+    "other": "その他"
+  }
+}
