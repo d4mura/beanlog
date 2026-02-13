@@ -1,8 +1,7 @@
 import uuid
 from datetime import datetime
 
-from pgvector.sqlalchemy import Vector
-from sqlalchemy import DateTime, ForeignKey, Integer, Numeric, String, UniqueConstraint, func
+from sqlalchemy import DateTime, ForeignKey, Integer, Numeric, String, Text, UniqueConstraint, func
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
@@ -35,7 +34,7 @@ class Bean(Base):
     purchase_url: Mapped[str | None] = mapped_column(String, nullable=True)
     avg_rating: Mapped[float] = mapped_column(Numeric(2, 1), default=0.0)
     review_count: Mapped[int] = mapped_column(Integer, default=0)
-    flavor_embedding = mapped_column(Vector(384), nullable=True)
+    flavor_embedding: Mapped[str | None] = mapped_column(Text, nullable=True)  # Phase 1: Vector(384)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), nullable=False, server_default=func.now()
     )
