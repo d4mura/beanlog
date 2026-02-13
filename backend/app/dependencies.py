@@ -7,7 +7,15 @@ from sqlalchemy.orm import Session, sessionmaker
 
 from app.config import settings
 
-engine = create_engine(settings.database_url, pool_pre_ping=True)
+
+def _fix_db_url(url: str) -> str:
+    """Fly.io uses postgres:// but SQLAlchemy requires postgresql://."""
+    if url.startswith("postgres://"):
+        return url.replace("postgres://", "postgresql://", 1)
+    return url
+
+
+engine = create_engine(_fix_db_url(settings.database_url), pool_pre_ping=True)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 
