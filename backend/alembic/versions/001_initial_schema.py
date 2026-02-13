@@ -9,7 +9,12 @@ from typing import Sequence, Union
 
 import sqlalchemy as sa
 from alembic import op
-from pgvector.sqlalchemy import Vector
+
+try:
+    from pgvector.sqlalchemy import Vector
+    HAS_PGVECTOR = True
+except ImportError:
+    HAS_PGVECTOR = False
 
 revision: str = "001"
 down_revision: Union[str, None] = None
@@ -19,8 +24,11 @@ depends_on: Union[str, Sequence[str], None] = None
 
 def upgrade() -> None:
     # Extensions
-    op.execute("CREATE EXTENSION IF NOT EXISTS vector")
     op.execute("CREATE EXTENSION IF NOT EXISTS pg_trgm")
+    try:
+        op.execute("CREATE EXTENSION IF NOT EXISTS vector")
+    except Exception:
+        pass  # pgvector not available - Phase 0 doesn't need it
 
     # --- users ---
     op.create_table(
@@ -88,7 +96,7 @@ def upgrade() -> None:
         sa.Column("purchase_url", sa.String, nullable=True),
         sa.Column("avg_rating", sa.Numeric(2, 1), server_default="0.0"),
         sa.Column("review_count", sa.Integer, server_default="0"),
-        sa.Column("flavor_embedding", Vector(384), nullable=True),
+        sa.Column("flavor_embedding", Vector(384) if HAS_PGVECTOR else sa.LargeBinary, nullable=True),
         sa.Column("created_at", sa.DateTime(timezone=True), nullable=False, server_default=sa.func.now()),
         sa.Column("updated_at", sa.DateTime(timezone=True), nullable=False, server_default=sa.func.now()),
         sa.Column("deleted_at", sa.DateTime(timezone=True), nullable=True),
